@@ -48,9 +48,9 @@
 # ****************************************************************************************************
 
 # Setup toggles
-STEALTH_MODE=false
-CHANGE_HOSTNAME=false
-CHANGE_MAC_ADDRESS=false
+STEALTH_MODE=true
+CHANGE_HOSTNAME=true
+CHANGE_MAC_ADDRESS=true
 LOOKUP_SUBNET=true
 COPY_BACK_DHCP_RETRIEVED_DNS_SERVERS=true
 USE_CUSTOM_DNS_SERVER=false
@@ -71,13 +71,13 @@ GRAB_PUBLIC_IP_WHOIS_LOOT=true
 GRAB_LLDP_LOOT=true
 GRAP_ARP_SCAN_LOOT=true
 GRAB_NMAP_LOOT=true
-GRAB_NMAP_INTERESTING_HOSTS_LOOT=false
+GRAB_NMAP_INTERESTING_HOSTS_LOOT=true
 GRAB_DIG_LOOT=true
 TRY_TO_GET_INTERNAL_DOMAINS=true
 
 # Finish toggles
 EXFIL_TO_CLOUD_C2=false
-EXFIL_TO_PASTEBIN=false				# Please note the API limitations: guests can create up to 10 new pastes per 24 hours, IP's that make too many requests will be blocked!
+EXFIL_TO_PASTEBIN=false 			# Please note the API limitations: guests can create up to 10 new pastes per 24 hours, IP's that make too many requests will be blocked!
 EXFIL_TO_SLACK=false				# Need files:write permissions in app settings!
 BLINK_INTERNAL_IP_ADDRESS=false
 HALT_SYSTEM_WHEN_DONE=false
@@ -98,7 +98,7 @@ PUBLIC_IP_URL="http://icanhazip.com"
 CLOUD_C2_PROVISION="/etc/device.config"
 
 # Attack variables
-TRACEROUTE_HOST="8.8.8.8"
+TRACEROUTE_HOST="1.1.1.1"
 INTERNAL_DOMAINS="mydomain.local"
 BANDWIDTH_FOR_ARP_SCAN="100000"
 NMAP_OPTIONS_ACTIVE_HOSTS="--top-ports 20"
